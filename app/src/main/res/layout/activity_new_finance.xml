@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dev.com.trykotlin.test.newfinances.NewFinanceActivity">
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_alignParentLeft="true"
+                    android:textStyle="bold"
+                    android:id="@+id/tvNomor"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:ems="8"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="Nomor" />
+
+                <TextView
+                    android:gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/hitam"
+                    android:id="@+id/tvTanggal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="8"
+                    android:textSize="15sp"
+                    android:text="Tanggal"
+                    android:inputType="datetime" />
+            </RelativeLayout>
+
+
+            <EditText
+                android:id="@+id/etDari"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Dari"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/etKeterangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:hint="Keterangan"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/etJumlah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:hint="Jumlah"
+                android:inputType="numberDecimal" />
+
+            <LinearLayout
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical"
+                android:id="@+id/llRekening"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTanggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="15dp"
+                    android:text="Pilih Rekening"
+                    android:layout_margin="3dp"
+                    android:textColor="@color/hitam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spinnerRek"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                </android.support.v7.widget.AppCompatSpinner>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvSpinnerSelected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_gravity="right"
+                    android:id="@+id/btnAddRekening"
+                    android:layout_marginRight="10dp"
+                    android:text="Tambah Rekening"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <!--<Button-->
+                <!--android:id="@+id/btnAddRekening"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="25pt"-->
+                <!--android:layout_marginStart="10dp"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--android:backgroundTint="@color/colorPrimary"-->
+                <!--android:drawableLeft="@drawable/ic_note_add_white_24dp"-->
+                <!--android:text="Rekening"-->
+                <!--android:textColor="@color/white"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/spinnerRek" />-->
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSimpan"
+                android:layout_width="match_parent"
+                android:layout_height="25pt"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/colorPrimary"
+                android:drawableLeft="@drawable/ic_note_add_white_24dp"
+                android:text="Simpan"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llRekening" />
+        </LinearLayout>
+
+</ScrollView>

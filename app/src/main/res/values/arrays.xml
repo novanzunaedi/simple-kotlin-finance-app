@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bank_name">
+        <item>@string/cimb</item>
+        <item>Bank Central Asia (BCA)</item>
+        <item>Bank Negara Indonesia (BNI)</item>
+        <item>Bank Rakyat Indonesia (BRI)</item>
+        <item>Bank Indonesia (BI)</item>
+        <item>Bank Mandiri</item>
+    </string-array>
+    <string name="cimb">Bank CIMB Niaga</string>
+</resources>
